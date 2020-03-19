@@ -1,0 +1,33 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-white">
+  <a class="navbar-brand" href="#">
+    <img src="assets/img/lam.jpg" width="200" height="80" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+      <h5>  <a class="nav-link text-dark font-weight-bold text-xl " [routerLink]="['home']">Home</a></h5>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+      <h5>  <a class="nav-link text-dark font-weight-bold" [routerLink]="['santos']" >Clientes</a></h5>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+      <h5>  <a class="nav-link text-dark font-weight-bold" style="tex 150px;" [routerLink]="['about']">About</a></h5>
+      </li>
+      <li class="nav-item dropdown">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar cliente" (Keyup.enter)="buscarSanto(buscarTexto.value)" #buscarTexto>
+      <button (click)="buscarSanto(buscarTexto.value)" class="btn btn-outline-warning my-2 my-sm-0" type="button">Buscar</button>
+    </div>
+  </div>
+</nav>

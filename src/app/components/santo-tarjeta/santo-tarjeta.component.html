@@ -1,0 +1,9 @@
+<div  class="card" >
+<img style="max-height:200px;max-width:320px" [src]="santo.img" class="card-img-top animated fadeIn" [alt]="santo.nombre">
+<div class="card-body">
+  <h5 class="card-title">{{santo.nombre}}</h5>
+  <p class="card-text"> {{ santo.bio | slice:0:200 }}...</p>
+  <p class="card-text"><small class="text-muted">{{ santo.aparicion }}</small></p>
+  <button (click)="verSanto()" type="button" class="btn btn-outline-primary btn-block" name="button"> Ver más... </button>
+</div>
+</div>

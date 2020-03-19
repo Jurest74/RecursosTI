@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+
+<h1 class="text-info">Clientes<small> TI Producción</small></h1>
+<hr>
+
+<div class="card-columns animated fadeIn fast">
+  <!--  *ngFor="let santo of santos; let i=index"  -->
+
+  <app-santo-tarjeta (santoSeleccionado)="verSanto($event)" [santo]="santo" [index]="i" *ngFor="let santo of santos; let i=index" ></app-santo-tarjeta>
+
+</div>

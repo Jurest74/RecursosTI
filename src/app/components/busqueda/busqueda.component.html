@@ -1,0 +1,18 @@
+
+
+<h1 class="text-info">Buscando: <small> "{{termino}}"</small></h1>
+<hr>
+
+<div *ngIf="santos.length==0" class="row animated fadeIn fast">
+    <div class="col-md-12">
+      <div style="height:80px" class="alert alert-info" role="alert">
+        <h4 style="text-align:center"><b class="text-danger">Upps!</b> Lo sentimos no tenemos resultados con el término: {{termino}}</h4>
+      </div>
+    </div>
+</div>
+
+<div class="card-columns animated fadeIn fast">
+
+<app-santo-tarjeta [santo]="santo" [index]="santo.index" *ngFor="let santo of santos; let i=index" ></app-santo-tarjeta>
+
+</div>

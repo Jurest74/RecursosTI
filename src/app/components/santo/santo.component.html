@@ -1,0 +1,25 @@
+<h1 class="text-primary">{{santo.nombre | uppercase}}</h1>
+<hr>
+
+<div class="row animated fadeIn">
+
+  <div class="col-md-4">
+
+    <img style="width:200px" [src]="santo.img" class="img-fluid" [alt]="santo.nombre">
+    <br><br>
+    <a [routerLink]="['/santos']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+
+  <div style="width:65%" class="cold-md-8">
+    <h3 class="text-warning">{{santo.aparicion}}</h3>
+    <hr>
+    <p>
+      {{santo.bio}}
+    </p>
+    <div>
+      <img *ngIf="santo.genero=='Femenino'" class="img-logo" src="assets/img/jesus.jpg" alt="Jesus">
+      <img *ngIf="santo.genero=='Masculino'" class="img-logo"   src="assets/img/maria.png" alt="Maria">
+    </div>
+  </div>
+
+</div>
